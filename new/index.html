@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Ficticio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <h1>Dr. Juan Pérez</h1>
+        <input type="checkbox" class="menu-toggle" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav id="menu">
+            <ul>
+                <li><a href="#descripcion">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#procedimientos">Procedimientos</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Блок с картинкой -->
+    <div class="image-block">
+        <img src="img1.jpg" class="responsive-image">
+        <div class="image-text"> Dr. Juan Pérez</div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="container">
+            <!-- Блок с описанием -->
+            <section class="content-block" id="descripcion">
+                <h2>Descripción del Doctor</h2>
+                <p>El Dr. Juan Pérez es un médico especializado en cirugía general con más de 20 años de experiencia en el campo. Se graduó con honores de la Universidad de Salamanca y ha trabajado en diversos hospitales reconocidos en España. Su enfoque está en la medicina preventiva y el tratamiento de enfermedades crónicas. Su misión es ofrecer atención médica personalizada, orientada al bienestar y la salud de cada paciente.</p>
+                <p>El Dr. Pérez tiene un enfoque único que combina la medicina moderna con tratamientos naturales, ofreciendo a sus pacientes la mejor atención para cada necesidad. Además de su dedicación clínica, es un apasionado por la investigación médica y ha publicado varios artículos en revistas científicas.</p>
+            </section>
+
+            <!-- Блок с услугами -->
+            <section class="content-block" id="servicios">
+                <h2>Servicios</h2>
+                <div class="service">
+                    <i class="fas fa-stethoscope"></i> <!-- Иконка для консультации -->
+                    <h3>Consulta médica general</h3>
+                    <p>Consulta integral para el diagnóstico de diversas enfermedades. El Dr. Pérez se especializa en medicina general, proporcionando soluciones personalizadas para cada paciente.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-heartbeat"></i> <!-- Иконка для экзачных обследований -->
+                    <h3>Exámenes médicos preventivos</h3>
+                    <p>Exámenes completos para la detección temprana de enfermedades. Estos exámenes son recomendados para personas de todas las edades, especialmente para aquellos con antecedentes familiares de enfermedades graves.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-apple-alt"></i> <!-- Иконка для питания -->
+                    <h3>Asesoramiento nutricional</h3>
+                    <p>El Dr. Pérez ofrece servicios de asesoramiento nutricional personalizado, con el objetivo de mejorar la salud mediante una alimentación equilibrada y adaptada a las necesidades de cada paciente.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-pills"></i> <!-- Иконка для лечения заболеваний -->
+                    <h3>Tratamiento para enfermedades crónicas</h3>
+                    <p>El Dr. Pérez es experto en el manejo de enfermedades crónicas como la diabetes, hipertensión y enfermedades cardiovasculares. Su enfoque incluye tanto el tratamiento médico como la orientación para llevar un estilo de vida saludable.</p>
+                </div>
+            </section>
+
+            <!-- Блок с ценами -->
+            <section class="content-block imgContainer" id="precios">
+                <h2>Precios de Servicios</h2>
+                <div class="price-block">
+                    <h3>Consulta general</h3>
+                    <p><strong>$50</strong> por sesión</p>
+                    <p>Consulta médica integral, que incluye examen físico, diagnóstico inicial y recomendaciones de tratamiento.</p>
+                </div>
+                <div class="price-block">
+                    <h3>Exámenes médicos preventivos</h3>
+                    <p><strong>$100</strong> por paquete completo</p>
+                    <p>Exámenes para detectar enfermedades de manera temprana, incluidos análisis de sangre, pruebas de función hepática y otros exámenes especializados.</p>
+                </div>
+                <div class="price-block">
+                    <h3>Asesoramiento nutricional</h3>
+                    <p><strong>$40</strong> por sesión</p>
+                    <p>Consulta personalizada con el Dr. Pérez para asesorarte sobre tu alimentación y mejorar tu bienestar general.</p>
+                </div>
+                <div class="price-block">
+                    <h3>Tratamiento para enfermedades crónicas</h3>
+                    <p><strong>$70</strong> por consulta de seguimiento</p>
+                    <p>Sesiones de seguimiento y tratamiento para enfermedades crónicas, con monitoreo constante y ajustes en el tratamiento según sea necesario.</p>
+                </div>
+            </section>
+
+            <!-- Блок с процедурами -->
+            <section class="content-block" id="procedimientos">
+                <h2>Procedimientos Médicos</h2>
+                <div class="procedures-list">
+                    <p><strong>Cirugía laparoscópica:</strong> Procedimiento mínimamente invasivo utilizado para tratar una variedad de enfermedades abdominales.</p>
+                    <p><strong>Biopsias:</strong> Procedimiento para tomar muestras de tejidos y determinar la presencia de cáncer o infecciones.</p>
+                    <p><strong>Tratamiento de lesiones deportivas:</strong> Técnicas avanzadas para el tratamiento de lesiones musculares y articulares derivadas del deporte.</p>
+                    <p><strong>Endoscopia digestiva:</strong> Procedimiento utilizado para examinar el sistema digestivo, permitiendo diagnosticar trastornos como úlceras o cáncer.</p>
+                </div>
+            </section>
+
+            <!-- Блок с отзывами -->
+            <section class="content-block" id="opiniones">
+                <h2>Opiniones de los Pacientes</h2>
+                <div class="testimonials">
+                    <p>"El Dr. Pérez me ayudó a controlar mi diabetes y me brindó un plan de vida saludable que mejoró mi calidad de vida." - <strong>Ana López</strong></p>
+                    <p>"Gracias al Dr. Pérez, mi cirugía fue un éxito. Me explicó todo el procedimiento y me sentí muy seguro durante todo el proceso." - <strong>Carlos García</strong></p>
+                    <p>"El mejor médico en el que he confiado. Su atención personalizada es insuperable. Siempre me escucha y me da el mejor tratamiento." - <strong>Lucía Martínez</strong></p>
+                </div>
+				<img src="img3.jpg">
+            </section>
+
+            <!-- Блок с контактами -->
+            <section class="content-block" id="contactos">
+                <h2>Contactos</h2>
+                <div class="contact-info">
+                    <p>Email: <strong>contacto@doctorjuan.com</strong></p>
+                    <p>Teléfono: <strong>123-456-789</strong></p>
+                    <p>Dirección: <strong>Calle Ficticia, 123, Ciudad, España</strong></p>
+                    <p>Horario: <strong>Lunes a Viernes de 9:00 a 18:00</strong></p>
+                </div>
+            </section>
+        
+		
+		<section class="content-block">
+			<h2>Formulario de contacto</h2>
+			<form action="gracias.html" method="POST" class="contact-form">
+				<!-- Campo para la ciudad (lista desplegable) -->
+				<label for="city">Ciudad</label>
+				<select id="city" name="city" required>
+					<option value="madrid">Madrid</option>
+					<option value="barcelona">Barcelona</option>
+					<option value="valencia">Valencia</option>
+					<option value="sevilla">Sevilla</option>
+					<option value="málaga">Málaga</option>
+					<option value="zaragoza">Zaragoza</option>
+					<option value="bilbao">Bilbao</option>
+					<option value="granada">Granada</option>
+					<option value="alicante">Alicante</option>
+					<option value="murcia">Murcia</option>
+				</select>
+				
+				<!-- Campo para el número de casa -->
+				<label for="houseNumber">Número de casa</label>
+				<input type="text" id="houseNumber" name="houseNumber" placeholder="Número de casa" required />
+				
+				<!-- Campo para el correo electrónico -->
+				<label for="email">Correo electrónico</label>
+				<input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+				
+				<!-- Campo para el teléfono -->
+				<label for="phone">Teléfono</label>
+				<input type="tel" id="phone" name="phone" placeholder="Número de teléfono" required />
+				
+				<!-- Checkbox para "Recordarme" -->
+				<label for="rememberMe">
+					<input type="checkbox" id="rememberMe" name="rememberMe" />
+					Recordarme
+				</label>
+				
+				<!-- Botón de envío -->
+				<button type="submit">Enviar</button>
+			</form>
+		</section>
+		</div>
+    </main>
+<section class="cookie-policy">
+    <input type="radio" id="cookieAccept" name="cookieConsent" class="cookie-radio" />
+    <input type="radio" id="cookieReject" name="cookieConsent" class="cookie-radio" />
+    
+    <div class="cookie-content">
+        <p>Usamos cookies para mejorar su experiencia. ¿Aceptas el uso de cookies?</p>
+        
+        <!-- Кнопки для принятия и отказа -->
+        <button class="cookie-btn accept" for="cookieAccept">Aceptar</button>
+
+        <!-- Кнопка закрытия -->
+        <label for="cookieAccept" class="close-btn">×</label>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <p>
+            <a href="politica-de-cookies.html">Política de Cookies</a> | 
+            <a href="politica-de-privacidad.html">Política de Privacidad</a>
+        </p>
+        <p>&copy; 2024 Tu Empresa</p>
+    </div>
+</footer>
+
+</body>
+</html>

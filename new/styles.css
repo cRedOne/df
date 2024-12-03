@@ -1,0 +1,478 @@
+/* Общие стили */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    scroll-behavior: smooth;
+
+    /* Начальный градиент */
+    background: linear-gradient(45deg, #ffffff, #d3d3d3);
+    background-size: 400% 400%; /* Для плавного эффекта */
+    animation: gradientBackground 5s ease infinite; /* Анимация */
+}
+
+/* Анимация фона с изменяющимся углом */
+@keyframes gradientBackground {
+    0% {
+        background: linear-gradient(45deg, #ffffff, #d3d3d3);
+    }
+    10% {
+        background: linear-gradient(30deg, #ffffff, #d3d3d3);
+    }
+    20% {
+        background: linear-gradient(60deg, #ffffff, #d3d3d3);
+    }
+    30% {
+        background: linear-gradient(90deg, #ffffff, #d3d3d3);
+    }
+    40% {
+        background: linear-gradient(120deg, #ffffff, #d3d3d3);
+    }
+    50% {
+        background: linear-gradient(150deg, #ffffff, #d3d3d3);
+    }
+    60% {
+        background: linear-gradient(180deg, #ffffff, #d3d3d3);
+    }
+    70% {
+        background: linear-gradient(210deg, #ffffff, #d3d3d3);
+    }
+    80% {
+        background: linear-gradient(240deg, #ffffff, #d3d3d3);
+    }
+    90% {
+        background: linear-gradient(270deg, #ffffff, #d3d3d3);
+    }
+    100% {
+        background: linear-gradient(300deg, #ffffff, #d3d3d3);
+    }
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #00aaff, #0077cc); /* начальный градиент */
+    padding: 15px 20px;
+    color: white;
+    position: relative;
+    transition: background 0.5s ease; /* Плавный переход для фона */
+}
+
+/* Эффект при наведении на шапку */
+header:hover {
+    background: linear-gradient(120deg, #00aabb, #0077cc); /* изменение угла градиента */
+    color: black; /* изменяем цвет текста при ховере */
+}
+
+/* Заголовок в шапке */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: font-size 0.7s ease, color 0.7s ease; /* Плавное изменение размера шрифта */
+}
+
+/* Эффект при наведении на заголовок */
+header:hover h1 {
+    font-size: 30px; /* увеличение шрифта */
+    color: black; /* изменяем цвет текста */
+}
+
+h2 {
+    color: #0077cc; /* Синий цвет для всех h2 */
+}
+
+.menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Меню на мобильных устройствах */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked + .menu-icon + #menu {
+    display: block;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #007BFF;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+#menu ul {
+    display: block;
+}
+
+#menu ul li {
+    margin: 10px 0;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Блок с картинкой */
+.image-block {
+    width: 100%; /* Блок на всю ширину */
+    height: 400px; /* Высота блока */
+    overflow: hidden; /* Обрезаем лишнее, если изображение больше по высоте */
+}
+
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Позиционирует изображение по центру */
+}
+.image-text {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%); /* Сдвигаем текст на половину его ширины */
+    color: #D4AF37;
+    font-size: 60px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Основной контейнер для контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Блок с изображением фона */
+.imgContainer {
+    background-image: url('img2.jpg'); /* Указываем путь к картинке */
+    background-size: cover; /* Растягиваем картинку на весь блок */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Отключаем повторение картинки */
+}
+
+/* Блоки контента с скругленными углами и тенью */
+.content-block {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-block:hover {
+    border:2px solid lightblue;
+}
+/* Форма обратной связи */
+.contact-form {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
+}
+/* Стили для блока cookie */
+.cookie-policy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+/* Стили для кнопок "Aceptar" и "Rechazar" */
+.cookie-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.cookie-btn:hover {
+    background-color: #45a049;
+}
+
+/* Кнопка "Rechazar" всегда красная */
+.cookie-btn.reject {
+    background-color: #f44336;
+}
+
+.cookie-btn.reject:hover {
+    background-color: #e53935;
+}
+
+/* Крестик для закрытия */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Скрытие всего блока cookie при активации радиокнопки */
+.cookie-radio:checked ~ .cookie-content {
+    display: none; /* Скрывает весь блок */
+}
+
+/* Скрытие самого чекбокса */
+.cookie-radio {
+    display: none;
+}
+
+/* Контейнер для текста */
+.cookie-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Стили для футера */
+footer {
+    width: 100%; /* Футер будет занимать всю ширину */
+    background-color: #333; /* Цвет фона футера */
+    color: white; /* Цвет текста футера */
+    padding: 20px 0; /* Внутренние отступы сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px; /* Максимальная ширина контейнера футера */
+    margin: 0 auto; /* Центрируем футер */
+    padding: 0 20px; /* Отступы по бокам */
+}
+
+footer a {
+    color: #f4f4f4; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+footer a:hover {
+    color: #00aaff; /* Цвет ссылок при наведении */
+}
+
+/* Респонсивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Уменьшаем отступы на мобильных */
+    }
+
+    .footer-container {
+        padding: 0 10px; /* Уменьшаем отступы в контейнере футера */
+    }
+
+    footer p {
+        font-size: 14px; /* Меньший размер шрифта на мобильных устройствах */
+    }
+
+    footer a {
+        font-size: 14px; /* Меньший размер шрифта ссылок на мобильных */
+    }
+}
+
+/* Стили для формы обратной связи */
+.contact-form {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left; /* Выравнивание текста */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form select,
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Добавим отступ между полями */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input {
+    margin-right: 10px; /* Отступ между чекбоксом и текстом */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+        margin-left: 15px; /* Добавляем отступ слева */
+        margin-right: 15px; /* Добавляем отступ справа */
+    }
+
+    .contact-form label {
+        font-size: 13px;
+    }
+
+    .contact-form select,
+    .contact-form input,
+    .contact-form button {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service i {
+        margin-bottom: 10px;
+    }
+
+    .cookie-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Дополнительные стили для контактной формы на маленьких экранах */
+    .contact-form {
+        padding: 15px;
+        margin-left: 10px; /* Уменьшаем отступы на еще меньших экранах */
+        margin-right: 10px; /* Уменьшаем отступы */
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 12px; /* Уменьшаем размер шрифта для полей */
+    }
+
+    .contact-form button {
+        padding: 10px; /* Уменьшаем padding кнопки */
+    }
+}
